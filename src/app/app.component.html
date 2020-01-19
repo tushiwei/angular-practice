@@ -1,0 +1,20 @@
+
+
+<hello name="{{ name }}"></hello>
+<label for="inserwhitespace">Insert white space:</label>
+<input id="inserwhitespace" placeholder="enter some text" name="name" [value]="textValue" 
+      (change)="formatText($event)" />
+<p id="log">{{textValue}}</p>
+
+<div id="first">
+  <div id="second">
+    <div id="third" class="third">
+        <label for="palindrome">check is palindromw</label>
+        <input placeholder="enter some text" id="palindrome" [value]="palindromeText"
+           (change)="checkPalindrome($event.target.value)" />
+        <p>{{palindromeText}} is palindrome: {{isPalindrome}}
+    </div>
+  </div>
+</div>
+
+

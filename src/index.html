@@ -1,0 +1,97 @@
+<my-app>loading</my-app>
+
+<style>
+   #third {
+     background-color: blue;
+     color: white;
+   }
+   #third .fourth {
+     background-color: red;
+     color: yellow;
+   }
+   label {
+     display: block;
+   }
+</style>
+
+<Label id="third">this is a label
+  <div class="fourth">this is a child of lable</div>
+</Label>
+<br />
+<Label id="third" class="fourth">this is a label
+  <div>this is a child of lable</div>
+</Label>
+
+
+<h2>Javas Script Array Methods</h2>
+<h2>Splice</h2>
+<p> The splice() method adds new elements to an Array, and returns an array with the deleted elemetns ( if any)></p>
+<button onclick="myFunc()">Try it</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+   var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+   var demo1 = document.getElementById('demo1');
+   demo1.innerHTML = 'Original Array:<br>' + fruits;
+
+   function myFunc() {
+     var removed = fruits.splice(2, 2, "Lemon", 'Kiwi');
+     document.getElementById('demo2').innerHTML = 'New Array: <br>' + fruits;
+     document.getElementById('demo3').innerHTML = 'Removed Array: <br>' + removed;
+   }
+</script>
+
+<h2>JavaScript new Date()</h2>
+
+<p>One digit years will be interpreted as 19xx:</p>
+
+<p id="onedigit"></p>
+
+<script>
+var d = new Date(9, 11, 24);
+document.getElementById("onedigit").innerHTML = 'new Date(9, 11, 24) is: ' + d;
+</script>
+
+<p>Using new Date(milliseconds), creates a new date object as January 1, 1970, 00:00:00 Universal Time (UTC) plus the milliseconds:</p>
+
+<p id="zerodate"></p>
+
+<script>
+var d = new Date(0);
+document.getElementById("zerodate").innerHTML = d;
+</script>
+
+<script>
+  var myObject = {
+    foo: "bar",
+    func: function() {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);
+        console.log("outer func:  self.foo = " + self.foo);
+        (function() {
+            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  self.foo = " + self.foo);
+        }());
+    }
+  };
+  myObject.func();
+
+  console.log("0 || 1 = "+(0 || 1));
+  console.log("1 || 2 = "+(1 || 2));
+  console.log("0 && 1 = "+(0 && 1));
+  console.log("1 && 2 = "+(1 && 2));
+
+  console.log(Boolean('0'));
+  console.log(false == '0');
+  console.log(false === '0');
+
+  var a={},
+    b={key:'b'},
+    c={key:'c'};
+    a[b]=123;
+    a[c]=456;
+    console.log(a[b]);
+</script>
